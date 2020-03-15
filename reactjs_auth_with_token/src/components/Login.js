@@ -43,11 +43,11 @@ export default class Login extends Component {
             return <Redirect to='/admin' />
         }
         return (
-            <div>
-               <h1>Login</h1> 
+            <div style={{ textAlign: 'center' }} >
+               <h1>Login</h1><hr /> 
 
-               <form onSubmit={this.submitForm} >
-                    <input 
+               <form onSubmit={this.submitForm} style={{ marginTop: '10%' }} >
+                    Username: <input 
                     type='text'
                     placeholder='username' 
                     name='username' 
@@ -55,8 +55,8 @@ export default class Login extends Component {
                     onChange={this.onChange} />
 
                     <br />
-
-                    <input 
+                    <br />
+                   Password: <input 
                     type='password' 
                     placeholder='password' 
                     name='password' 
@@ -64,11 +64,11 @@ export default class Login extends Component {
                     onChange={this.onChange} />
 
                     <br />
-
+                    <br />
                     <input type='submit' />
                </form>
                
-               <h6>*Hint=> username & password : Hey</h6>
+               <h6 style={{color: 'green'}}>*Hint=> username & password : Hey</h6>
                
             </div>
         )
